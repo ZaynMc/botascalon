@@ -423,7 +423,7 @@ function generateMessages(){
  
  
 bot.on("message", message => {
-  let perms = message.member.permissions;
+
 
   // Check if a member has a specific permission on the guild!
     if (message.channel.permissionsFor(message.member).hasPermission("ADMINISTRATOR") && message.content.toLowerCase() == setupCMD){
