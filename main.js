@@ -423,7 +423,11 @@ function generateMessages(){
  
  
 bot.on("message", message => {
-    if (message.content.toLowerCase() == setupCMD){
+  let perms = message.member.permissions;
+
+  // Check if a member has a specific permission on the guild!
+  let has_kick = perms.has("ADMINISTRATOR");
+    if (has_kick == true && message.content.toLowerCase() == setupCMD){
         var toSend = generateMessages();
         let mappedArray = [[toSend[0], false], ...toSend.slice(1).map( (message, idx) => [message, reactions[idx]])];
         for (let mapObj of mappedArray){
