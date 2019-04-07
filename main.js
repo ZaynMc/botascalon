@@ -426,7 +426,7 @@ bot.on("message", message => {
 
 
   // Check if a member has a specific permission on the guild!
-    if (message.channel.permissionsFor(message.member).hasPermission("ADMINISTRATOR") && message.content.toLowerCase() == setupCMD){
+    if (message.member.hasPermission('KICK_MEMBERS') && message.content.toLowerCase() == setupCMD){
         var toSend = generateMessages();
         let mappedArray = [[toSend[0], false], ...toSend.slice(1).map( (message, idx) => [message, reactions[idx]])];
         for (let mapObj of mappedArray){
