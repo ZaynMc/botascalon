@@ -232,6 +232,7 @@ bot.on("message", async message => {
 
 
 bot.on("message", async message => {
+  if(message.channel.type === "dm") return;
 
   // Part 1 : checking & removing the text
   //1 blacklisted words
@@ -240,7 +241,7 @@ let blacklisted = ['discord.gg'] //words put , after the word
 //2 looking for words
 let foundInText = false;
 for (var i in blacklisted) { // loops through the blacklisted list
-  if(message.channel.name == "👍partenariat" ||message.channel.name == "🤝échange-de-pub🤝" || message.channel.name == "👆petite-pub") return;
+  if(message.channel.name == "👍partenariat" ||message.channel.name == "🤝échange-de-pub🤝" || message.channel.name == "👆petite-pub" || message.channel.hasPermission("ADMINISTRATOR")) return;
   
 
   if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true;
@@ -423,7 +424,6 @@ function generateMessages(){
  
  
 bot.on("message", message => {
-
 
   // Check if a member has a specific permission on the guild!
     if (message.content.toLowerCase() == setupCMD){
