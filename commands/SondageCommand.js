@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args, ops) => {
     let arg = message.content.split(" ").slice(1);
     let thingToEco = arg.join(" ");
 
-    let myRole = message.guild.roles.find(role => role.name === "NotifSondages");
+    let myRole = message.guild.roles.find(role => role.name === "Notif Sondages");
 
     /*_function.embed(`[LOG] SEND SONDAGE MESSAGE BY ${message.author}`,"history-bot",false, 0);
 
