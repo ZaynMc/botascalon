@@ -1,5 +1,5 @@
-const Discord = require("discord.js");
-let _function = require("../../../function.js");
+const Discord = require("./node_modules/discord.js.js");
+let _function = require("../function.js");
 
 module.exports.run = async (bot, message, args, ops, tools) => {
 

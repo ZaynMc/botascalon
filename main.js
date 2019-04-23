@@ -122,7 +122,9 @@ function changeColor() {
    if(commandfile) commandfile.run(bot,message,args, ops, tools);
 
  });
-/*
+
+ /*
+
  bot.on('messageReactionAdd', (reaction, user) => {
 
   if (user.id !== bot.user.id) {
@@ -204,6 +206,7 @@ bot.on('guildMemberRemove', member => {
     //bot.channels.get(serverStats.memberCountID).setName(`Member Count : ${member.guild.members.filter(m => !m.user.bot).size}`); // total members (not inscued bot)
     bot.channels.get(serverStats.botCountID).setName(`Bot Count : ${member.guild.members.filter(m => m.user.bot).size}`); // bot count
 });
+*/
 
 bot.on("message", async message => {
 
@@ -229,7 +232,8 @@ bot.on("message", async message => {
   }
 
 });
-*/
+
+
 
 /*
 
