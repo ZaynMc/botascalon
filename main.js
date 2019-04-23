@@ -231,6 +231,8 @@ bot.on("message", async message => {
 });
 */
 
+/*
+
 bot.on("message", async message => {
   if(message.channel.type === "dm") return;
 
@@ -258,7 +260,7 @@ for (var i in blacklisted) { // loops through the blacklisted list
     message.channel.send(`<@${message.author.id}> Bonjour, la pub de serveur discord est interdite. Dernière avertissement avant le ban`).then(message => message.delete(5000));
 
   }
-});
+});*/
 
 bot.on("message", async message => {
   if(message.channel.type === "dm") return;
