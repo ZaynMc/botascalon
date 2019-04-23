@@ -122,7 +122,7 @@ function changeColor() {
    if(commandfile) commandfile.run(bot,message,args, ops, tools);
 
  });
-
+/*
  bot.on('messageReactionAdd', (reaction, user) => {
 
   if (user.id !== bot.user.id) {
@@ -229,7 +229,7 @@ bot.on("message", async message => {
   }
 
 });
-
+*/
 
 bot.on("message", async message => {
   if(message.channel.type === "dm") return;
