@@ -8,9 +8,9 @@ module.exports.run = async (bot, message, args, ops, tools) => {
   message.delete();
 
   let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-  if(!tomute) {tools.log("CHECK COMMAND MUTE NOT PLAYER FOUND", message); return;}
+  if(!tomute) return;
 
-  if(tomute.hasPermission("MANAGE_MESSAGES")) {tools.log('CHECK COMMAND MUTE NOT PLAYER HAS PERMISSION', message); return;}
+  if(tomute.hasPermission("MANAGE_MESSAGES"))return;
   let muterole = message.guild.roles.find(`name`, 'muted');
   //start of create role
   if(!muterole){
@@ -42,7 +42,6 @@ module.exports.run = async (bot, message, args, ops, tools) => {
   if(!mutetime) return message.channel.send("Vous n'avez pas précisez le temps.").then(message => message.delete(5000));
 
   await(tomute.addRole(muterole.id));
-  tools.log('PLAYER MUTED ' + message.author.name, message);
   //message.reply(`<@${tomute.id}> à été mute pour ${ms(ms(mutetime))}`).then(message => message.delete(5000));;
 
   const joinChannel = message.member.guild.channels.find('name', 'history-bot');
