@@ -501,7 +501,7 @@ bot.on('raw', event => {
  
     }  
 });*/
-/* const setupCMD = "!createrolemessage"
+ const setupCMD = "!createrolemessage"
 let initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
 const roles = ["Notif Boutique", "Notif Tournoi", "Notif PP", "Notif News", "Notif PUB", "Notif Sondages", "Notif Chroniques"];
 const reactions = ["🛒", "🏅", "🔑", "📰", "📜", "🌐", "📄"];
@@ -513,7 +513,7 @@ if (roles.length !== reactions.length) throw ":bell: **__À quel(s) messages sou
 function generateMessages(){
     var messages = [];
     messages.push(initialMessage);
-    for (let role of roles) messages.push(` \n Réagie à l'émojii pour avoir le grade : **"${role}"** !`);
+    messages.push(` \n Réagie à l'émojii pour avoir le grade : **"${role}"** !`); // for (let role of roles)
     return messages;
 }
 
@@ -559,6 +559,6 @@ bot.on('raw', event => {
         })
  
     }   
-});*/
+});
 
   bot.login(token);
