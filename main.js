@@ -511,9 +511,9 @@ if (roles.length !== reactions.length) throw ":bell: **__À quel(s) messages sou
 
 
 function generateMessages(){
-    var messages = [];
-    messages.push(initialMessage);
-    messages.push(` \n Réagie à l'émojii pour avoir le grade : **"${role}"** !`); // for (let role of roles)
+    var messages = ["Réagie à l'émojii pour avoir les grades !"];
+    //messages.push(initialMessage);
+    //messages.push(` \n Réagie à l'émojii pour avoir le grade : **"${role}"** !`); // for (let role of roles)
     return messages;
 }
 
