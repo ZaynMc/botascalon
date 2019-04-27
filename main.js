@@ -441,7 +441,7 @@ bot.on("message", async message => {
   }
   });
 
-  /*const setupCMD = "!setreactionpp"
+  const setupCMD = "!setreactionpp"
 let initialMessage = `**:bell: __Réction Notification Partie Perso__ :bell:**`;
 const roles = ["🔑 Notif PP"];
 const reactions = ["🔑"];
@@ -500,8 +500,9 @@ bot.on('raw', event => {
         })
  
     }  
-});*/
-/* const setupCMD = "!createrolemessage"
+});
+/*
+ const setupCMD = "!createrolemessage"
 let initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
 const roles = ["Notif Boutique", "Notif Tournoi", "Notif PP", "Notif News", "Notif PUB", "Notif Sondages", "Notif Chroniques"];
 const reactions = ["🛒", "🏅", "🔑", "📰", "📜", "🌐", "📄"];
