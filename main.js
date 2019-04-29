@@ -320,6 +320,10 @@ bot.on("message", async message => {
       channel = await guild.createChannel(`${message.author.username}-${message.author.discriminator}`);
 
       channel = await channel.setParent('531463499550031882');
+	    
+      channel.lockPermissions()
+	.then(() => console.log('Successfully synchronized permissions with parent channel'))
+	.catch(console.error);
 
 /*try {
             let ascalonall = guild.roles.find(`name`, "💧 Ascalon 💧");
