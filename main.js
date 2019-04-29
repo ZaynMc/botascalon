@@ -320,7 +320,7 @@ bot.on("message", async message => {
       channel = await guild.createChannel(`${message.author.username}-${message.author.discriminator}`);
 
       channel = await channel.setParent('531463499550031882');
-
+/*
       try {
             let ascalonall = guild.roles.find(`name`, "💧 Ascalon 💧");
             let moderationrole = guild.roles.find(`name`, "🌀 Modérateur 🌀");
@@ -369,7 +369,7 @@ bot.on("message", async message => {
         } catch(e){
           console.log(e.stack);
         }
-
+*/
       let author = message.author;
 
       const newChannel = new Discord.RichEmbed()
