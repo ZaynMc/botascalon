@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args, ops) => {
     .setColor("0xB40404")
     .setTimestamp()
     .setFooter("Sondage ASCALON");
-    message.guild.channels.find("name", "🌐sondage").sendEmbed(embed)
+    message.guild.channels.find("name", "『❔』sondages").sendEmbed(embed)
     .then(function (message) {
         message.react("❌")
         message.react("✅")
