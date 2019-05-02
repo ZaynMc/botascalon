@@ -325,7 +325,7 @@ bot.on("message", async message => {
 	.then(() => console.log('Successfully synchronized permissions with parent channel'))
 	.catch(console.error);
 
-/*try {
+try {
             let ascalonall = guild.roles.find(`name`, "💧 Ascalon 💧");
             let moderationrole = guild.roles.find(`name`, "🌀 Modérateur 🌀");
             let respmodorole = guild.roles.find(`name`, "staff");
@@ -372,7 +372,7 @@ bot.on("message", async message => {
 
         } catch(e){
           console.log(e.stack);
-        }*/
+        }
 
       let author = message.author;
 
